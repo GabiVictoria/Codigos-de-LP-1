@@ -12,6 +12,8 @@ public class main {
         BIB18.addlivros(new livros("Fúria Vermelha", "Pierce Brown", 2014));
         BIB18.addlivros(new livros("O Ladrao de Raiso", "Rick Riordan", 2008));
         BIB18.addlivros(new livros("Fahrenheit 451", "Ray Bradbury", 1953));
-
+        
+        BIB18.mostrarLivros();
+        BIB18.mostrarFuncionarios();
     }
 }
