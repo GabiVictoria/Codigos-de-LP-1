@@ -29,7 +29,15 @@ public class Main {
             }*/
 
            /* Endereco e1 = new Endereco("Limoeiro", "Sampa");
-            Endereco e2 = new Endereco("Beija flor", "Gotham City");
+10,03
+
+
+
+
+
+
+
+            Endereco e2 = new Endereco("Beija flor", "Gotham City");;
 
             transaction = session.beginTransaction();
             session.persist(e1);

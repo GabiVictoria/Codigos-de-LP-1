@@ -2,6 +2,8 @@ package entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity(name = "Pessoa")
 @Table(name = "Pessoa")
 
@@ -20,7 +22,7 @@ public class Pessoa {
     @JoinColumn (name = "endereco_id")
     private Endereco endereco;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "pessoa")
-    private List<pedido>
+    private List<Pedido> pedidos;
 
     public Pessoa(String nome, String sobrenome, String email, Endereco endereco) {
         this.nome = nome;
