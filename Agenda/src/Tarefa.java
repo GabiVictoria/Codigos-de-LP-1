@@ -31,9 +31,28 @@ public class Tarefa {
     public Date getData() {
         return data;
     }
-    public void ExcTarefa(){}
-    public void EdtTarefa(){}
-    public void ExibirData() throws ParseException {}
+    public static void EdtTarefa (int id) throws ParseException {
+        for (Tarefa p:Agenda.tarefas) {
+            if(p.idTarefa==(id)){
+                System.out.println("Deseja mudar o nome? Se nao tecle enter");
+                String a = ler.next();
+                if(a!=""){
+                    p.setNome(a);
+                }
+                System.out.println("Deseja mudar a descricao? Se nao tecle enter");
+                a = ler.next();
+                if(a!=""){
+                    p.setDescricao(a);
+                }
+                System.out.println("Deseja mudar a data incial? Se nao tecle enter");
+                a = ler.next();
+                if(a!=""){
+                    p.setDataInicio(a);
+                }
+            }
+
+        }
+    }
 
     public static void removerTarefa(){
         System.out.println("Digite o id da ocorrencia");
@@ -44,10 +63,22 @@ public class Tarefa {
     public static void consultaTarefas(String d){
         for (Tarefa p:Agenda.tarefas) {
             if(p.dataInicio.equals(d)){
-            System.out.println(p);
+                System.out.println(p);
+            }
+
         }
-        
-        }
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDataInicio(String dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     @Override

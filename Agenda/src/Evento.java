@@ -52,11 +52,39 @@ public class Evento {
         this.horaFinal = horaFinal;
     }
 
-    public void EdtEvento (int id){
+    public static void EdtEvento (int id) throws ParseException {
         for (Evento p:Agenda.eventos) {
             if(p.idEvento==(id)){
-                System.out.println("deseja mudar o nome?");
-                setNome();
+                System.out.println("Deseja mudar o nome? Se nao tecle enter");
+                String a = ler.next();
+                if(a!=""){
+                p.setNome(a);
+                }
+                System.out.println("Deseja mudar a descricao? Se nao tecle enter");
+                 a = ler.next();
+                if(a!=""){
+                    p.setDescricao(a);
+                }
+                System.out.println("Deseja mudar a hora incial? Se nao tecle enter");
+                a = ler.next();
+                if(a!=""){
+                    p.setHoraInicio(a);
+                }
+                System.out.println("Deseja mudar a hora final? Se nao tecle enter");
+                a = ler.next();
+                if(a!=""){
+                    p.setHoraFinal(a);
+                }
+                System.out.println("Deseja mudar a data incial? Se nao tecle enter");
+                a = ler.next();
+                if(a!=""){
+                    p.setDataInicio(a);
+                }
+                System.out.println("Deseja mudar a data final? Se nao tecle enter");
+                a = ler.next();
+                if(a!=""){
+                    p.setDataFinal(a);
+                }
             }
 
         }
@@ -70,15 +98,15 @@ public class Evento {
     public static void consultaEventos(String d){
         for (Evento p:Agenda.eventos) {
             if(p.dataInicio.equals(d)){
-            System.out.println(p);
-        }
-        
+                System.out.println(p);
+            }
+
         }
     }
 
 
     public void mudaData() throws ParseException {
-         data = new SimpleDateFormat("dd-MM-yyyy").parse(dataInicio);
+        data = new SimpleDateFormat("dd-MM-yyyy").parse(dataInicio);
     }
 
     public Date getData() {
@@ -109,4 +137,3 @@ public class Evento {
                 '}';
     }
 }
-

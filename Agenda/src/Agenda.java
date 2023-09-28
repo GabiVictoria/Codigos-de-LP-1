@@ -53,21 +53,24 @@ public class Agenda {
         return idOcorrencia;
     }
 
-public static int exibirMenu(int op){
-    System.out.println(" Exibindo menu ");
-    System.out.println(" Criar evento (1)");
-    System.out.println(" Criar tarefa (2)");
-    System.out.println(" Criar lembrete (3)");
-    System.out.println(" Remover evento (4)");
-    System.out.println(" Remover tarefa (5)");
-    System.out.println(" Remover lembrete (6)");
-    System.out.println(" Exibir evento (7)");
-    System.out.println(" Exibir tarefa (8)");
-    System.out.println(" Exibir lembrete (9)");
-    System.out.println(" Consultar por dia (10)");
-    System.out.println(" Digite a sua opcao!");
-    op= ler.nextInt();
-    return op;
+    public static int exibirMenu(int op){
+        System.out.println(" Exibindo menu ");
+        System.out.println(" Criar evento (1)");
+        System.out.println(" Criar tarefa (2)");
+        System.out.println(" Criar lembrete (3)");
+        System.out.println(" Remover evento (4)");
+        System.out.println(" Remover tarefa (5)");
+        System.out.println(" Remover lembrete (6)");
+        System.out.println(" Exibir evento (7)");
+        System.out.println(" Exibir tarefa (8)");
+        System.out.println(" Exibir lembrete (9)");
+        System.out.println(" Consultar por dia (10)");
+        System.out.println(" Editar evento (11)");
+        System.out.println(" Editar tarefa (12)");
+        System.out.println(" Editar lembrete (13)");
+        System.out.println(" Digite a sua opcao!");
+        op= ler.nextInt();
+        return op;
     }
 
 
