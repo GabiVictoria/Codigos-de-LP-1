@@ -7,5 +7,7 @@ public class Usuario {
     @Column
     private String nome;
     @Column
+    private String login;
+    @Column
     private String senha;
 }
