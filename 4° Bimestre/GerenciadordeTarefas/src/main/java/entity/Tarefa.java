@@ -12,7 +12,7 @@ public class Tarefa {
     @Column
     private String descricao;
     @Column
-    private String vencimmento;
+    private String vencimento;
     @Column
     @ManyToOne
     private Materia materia;
@@ -38,12 +38,12 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public String getVencimmento() {
-        return vencimmento;
+    public String getVencimento() {
+        return vencimento;
     }
 
-    public void setVencimmento(String vencimmento) {
-        this.vencimmento = vencimmento;
+    public void setVencimento(String vencimento) {
+        this.vencimento = vencimento;
     }
 
     public Materia getMateria() {
