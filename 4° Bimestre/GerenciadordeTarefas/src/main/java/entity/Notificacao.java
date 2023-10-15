@@ -9,5 +9,9 @@ public class Notificacao {
     @Column
     private String mensagem;
     @Column
+    @ManyToOne
     private Tarefa tarefa;
+    @Column
+    @ManyToOne
+    private Categoria categoria;
 }

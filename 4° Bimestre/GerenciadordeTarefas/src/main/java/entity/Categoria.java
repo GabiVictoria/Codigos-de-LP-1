@@ -15,5 +15,5 @@ public class Categoria {
     @Column
     private String descricao;
 
-    protected static List<Tarefa> tarefas= new ArrayList<>();
+
 }

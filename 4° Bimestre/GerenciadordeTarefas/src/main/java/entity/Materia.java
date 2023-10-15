@@ -14,6 +14,5 @@ public class Materia {
     private String nome;
     @Column
     private String descricao;
-
-    protected static List<Tarefa> tarefas= new ArrayList<>();
+    
 }

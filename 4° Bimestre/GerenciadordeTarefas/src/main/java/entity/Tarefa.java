@@ -14,10 +14,12 @@ public class Tarefa {
     @Column
     private String vencimmento;
     @Column
+    @ManyToOne
     private Materia materia;
     @Column
     private String status;
     @Column
+    @ManyToOne
     private Categoria categoria;
 
     public String getTitulo() {
