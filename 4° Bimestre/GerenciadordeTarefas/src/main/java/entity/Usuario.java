@@ -19,23 +19,15 @@ public class Usuario {
     private String senha;
     //indica um relacionamento "um para muitos" com a tabela Usuario:
     @OneToMany
-    //indica que a tabela vai ter uma chave estrangeira da tabela Usuario:
-    @JoinColumn(name="usuario_id")
     protected static List<Tarefa> tarefas= new ArrayList<>();
     //indica um relacionamento "um para muitos" com a tabela Usuario:
     @OneToMany
-    //indica que a tabela Materia possui uma chave estrangeira da tabela Usuario:
-    @JoinColumn(name="usuario_id")
     protected static List<Materia> materias= new ArrayList<>();
     //indica um relacionamento "um para muitos" com a tabela Usuario:
     @OneToMany
-    //indica que a tabela Categoria possui uma chave estrangeira da tabela Usuario:
-    @JoinColumn(name="usuario_id")
     protected static List<Categoria> categorias= new ArrayList<>();
     //indica um relacionamento "um para muitos" com a tabela Usuario:
     @OneToMany
-    //indica que a tabela Notificacao possui uma chave estrangeira da tabela Usuario:
-    @JoinColumn(name="usuario_id")
     protected static List<Notificacao> notificacoes= new ArrayList<>();
 
 
