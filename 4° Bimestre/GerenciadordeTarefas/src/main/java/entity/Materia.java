@@ -6,7 +6,7 @@ import java.util.List;
 @Entity(name = "Materia")
 @Table(name = "Materia")
 
-/*A classe Materia é responsável por gerar os objetos correspondentes as matérias do sistema gerenciador de tarefas*/
+//A classe Materia é responsável por gerar os objetos correspondentes as matérias do sistema gerenciador de tarefas
 public class Materia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
