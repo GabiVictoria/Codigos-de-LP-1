@@ -39,7 +39,7 @@ public class Usuario {
     protected static List<Notificacao> notificacoes= new ArrayList<>();
 
 
-    
+    //Imprime a lista das tarefas pendentes
     public void  tarefaPendente(){
         for (Tarefa p:Usuario.tarefas) {
             if(p.getStatus().equals("Pendente")){
@@ -48,6 +48,7 @@ public class Usuario {
 
         }
     }
+    //Imprime a lista das tarefas concluidas 
     public void  tarefaConcluida(){
         for (Tarefa p:Usuario.tarefas) {
             if(p.getStatus().equals("Concluida")){
