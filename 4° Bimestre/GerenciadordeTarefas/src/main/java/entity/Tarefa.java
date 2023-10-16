@@ -18,12 +18,16 @@ public class Tarefa {
     @Column
    //indica que a tabela Tarefa tem um relacionamento "muitos para um" com a tabela Materia:
     @ManyToOne
+   //indica que a tabela Tarefa possui uma chave estrangeira da tabela Materia:
+    @JoinColumn(name = "materia_id")
     private Materia materia;
     @Column
     private String status;
     @Column
     //indica que a tabela Tarefa tem um relacionamento de "muitos para um" com a tabela Categoria:
     @ManyToOne 
+    //indica que a tabela Tarefa possui uma chave estrangeira da tabela Categoria:
+    @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
     public String getTitulo() {
