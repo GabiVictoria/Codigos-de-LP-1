@@ -22,7 +22,7 @@ public class Tarefa {
     @Column
     private String status;
     @Column
-    /*indica que a classe Tarefa tem um           relacionamento de "muitos para um" com a classe      Categoria:*/
+    /*indica que a classe Tarefa tem um relacionamento de "muitos para um" com a classe Categoria:*/
     @ManyToOne 
     private Categoria categoria;
 
