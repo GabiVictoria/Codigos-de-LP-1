@@ -29,5 +29,6 @@
         <mapping class="entity.Notificacao" />
         <mapping class="entity.Tarefa" />
         <mapping class="entity.Usuario" />
+        <mapping class="entity.Relatorio" />
     </session-factory>
 </hibernate-configuration>
