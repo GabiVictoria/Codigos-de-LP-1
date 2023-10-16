@@ -3,6 +3,8 @@ import jakarta.persistence.*;
 @Entity(name = "Tarefa")
 @Table(name = "Tarefa")
 
+
+/*produz os objetos que correspondem as tarefas dentro do sistema de gerenciador de tarefas.*/  
 public class Tarefa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,12 +16,14 @@ public class Tarefa {
     @Column
     private String vencimento;
     @Column
+   /*indica que a classe Tarefa tem um relacionamento "muitos para um" com a classe Materia:*/
     @ManyToOne
     private Materia materia;
     @Column
     private String status;
     @Column
-    @ManyToOne
+    /*indica que a classe Tarefa tem um           relacionamento de "muitos para um" com a classe      Categoria:*/
+    @ManyToOne 
     private Categoria categoria;
 
     public String getTitulo() {
