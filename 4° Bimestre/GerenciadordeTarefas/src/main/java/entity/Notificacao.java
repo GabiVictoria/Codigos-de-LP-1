@@ -13,9 +13,13 @@ public class Notificacao {
     @Column
     //indica um relacionamento "muitos para um" com a tabela Tarefa:
     @ManyToOne
+    //indica que a tabela Notificacao possui uma chave estrangeira da tabela Tarefa:
+    @JoinColumn(name = "tarefa_id")
     private Tarefa tarefa;
     @Column
     //indica um relacionamento "muitos para um" com a tabela Categoria:
     @ManyToOne
+    //indica que a tabela Notificacao possui uma chave estrangeira da tabela Categoria:
+    @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 }
