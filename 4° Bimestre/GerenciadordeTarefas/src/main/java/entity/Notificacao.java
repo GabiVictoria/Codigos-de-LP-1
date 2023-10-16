@@ -11,11 +11,11 @@ public class Notificacao {
     @Column
     private String mensagem;
     @Column
-    //indica um relacionamento "muitos para um" com a classe Tarefa:
+    //indica um relacionamento "muitos para um" com a tabela Tarefa:
     @ManyToOne
     private Tarefa tarefa;
     @Column
-    //indica um relacionamento "muitos para um" com a classe Categoria:
+    //indica um relacionamento "muitos para um" com a tabela Categoria:
     @ManyToOne
     private Categoria categoria;
 }
