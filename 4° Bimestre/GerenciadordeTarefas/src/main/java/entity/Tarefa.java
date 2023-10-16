@@ -16,13 +16,13 @@ public class Tarefa {
     @Column
     private String vencimento;
     @Column
-   //indica que a classe Tarefa tem um relacionamento "muitos para um" com a classe Materia:
+   //indica que a tabela Tarefa tem um relacionamento "muitos para um" com a tabela Materia:
     @ManyToOne
     private Materia materia;
     @Column
     private String status;
     @Column
-    //indica que a classe Tarefa tem um relacionamento de "muitos para um" com a classe Categoria:
+    //indica que a tabela Tarefa tem um relacionamento de "muitos para um" com a tabela Categoria:
     @ManyToOne 
     private Categoria categoria;
 
