@@ -75,22 +75,24 @@ import java.util.ResourceBundle;
             datee.setCellValueFactory(new PropertyValueFactory<>("dataLimite"));
 
 
-            checkBoxCol.setCellFactory(tc -> new CheckBoxTableCell<Tarefa, Boolean>() {
-                @Override
-                public void updateItem(Boolean item, boolean empty) {
-                    super.updateItem(item, empty);
-                    if (!isEmpty()) {
-                        CheckBox checkBox = new CheckBox();
-                        checkBox.setSelected(item);
-                        setGraphic(checkBox);
-                        checkBox.setOnAction(event -> {
-                            Tarefa tarefa = getTableView().getItems().get(getIndex());
-                            tarefa.setStatus(checkBox.isSelected());
-                        });
-                    }
-                }
-            });
+//            checkBoxCol.setCellFactory(tc -> new CheckBoxTableCell<Tarefa, Boolean>() {
+//                @Override
+//                public void updateItem(Boolean item, boolean empty) {
+//                    super.updateItem(item, empty);
+//                    if (!isEmpty()) {
+//                        CheckBox checkBox = new CheckBox();
+//                        checkBox.setSelected(item);
+//                        setGraphic(checkBox);
+//                        checkBox.setOnAction(event -> {
+//                            Tarefa tarefa = getTableView().getItems().get(getIndex());
+//                            tarefa.setStatus(checkBox.isSelected());
+//                        });
+//                    }
+//                }
+//            });
         }
+
+
 
         @FXML
         public void salvarTarefa() {
@@ -98,9 +100,9 @@ import java.util.ResourceBundle;
             String descricao = descricaoTarefa.getText();
             String data = String.valueOf(dataTarefa.getValue());
             System.out.println(data);
-            Tarefa t = new Tarefa(nome, descricao, data, false, new Categoria("romano"));
+            Tarefa tarefa = new Tarefa(nome, descricao, data, false, new Categoria("romano"));
             System.out.println("salvou tarefa");
-            tarefaSessao.salvarTarefa(t);
+            tarefaSessao.salvarTarefa(tarefa);
             exibirTarefas();
         }
 
@@ -157,9 +159,7 @@ import java.util.ResourceBundle;
                 MenuItem menuItem = new MenuItem(categoria.getNome());
 
 
-                menuItem.setOnAction(event -> {
-                    btnCategoria.setText(categoria.getNome());
-                });
+                menuItem.setOnAction(event -> btnCategoria.setText(categoria.getNome()));
 
                 btnCategoria.getItems().add(menuItem);
             }

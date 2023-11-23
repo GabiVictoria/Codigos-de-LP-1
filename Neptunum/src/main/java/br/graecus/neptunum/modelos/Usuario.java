@@ -14,7 +14,7 @@ public class Usuario {
     @Column
     private String nickName;
 
-    @Column
+    @Column(unique = true)
     private String nomeUsuario;
 
 
@@ -29,6 +29,10 @@ public class Usuario {
         this.nickName = nickName;
         this.nomeUsuario = nomeUsuario;
         this.senha = senha;
+    }
+
+    public  Usuario(){
+
     }
 
 

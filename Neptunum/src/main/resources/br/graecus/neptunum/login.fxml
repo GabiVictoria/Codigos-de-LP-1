@@ -20,7 +20,7 @@
             <Font size="18.0" />
          </font></Label>
       <PasswordField id="idSenha" fx:id="senha" layoutX="483.0" layoutY="268.0" prefHeight="25.0" prefWidth="184.0" promptText="Senha" />
-      <Label fx:id="aviso" layoutX="564.0" layoutY="204.0" prefHeight="27.0" prefWidth="136.0" textAlignment="CENTER" textFill="deeppink" />
+      <Label fx:id="iris" layoutX="564.0" layoutY="204.0" prefHeight="27.0" prefWidth="136.0" textAlignment="CENTER" textFill="deeppink" />
       <Button id="idAcessar" layoutX="510.0" layoutY="325.0" mnemonicParsing="false" onAction="#entrar" prefHeight="37.0" prefWidth="129.0" style="-fx-background-color: #F6B800; -fx-background-radius: 10px; -fx-font-weight: bold;" text="Entrar" textFill="#203d65">
          <font>
             <Font size="16.0" />
@@ -35,7 +35,7 @@
             <Font size="11.0" />
          </font>
       </Label>
-      <Button id="idCadastreSe" fx:id="idCadastreSe" layoutX="70.0" layoutY="326.0" mnemonicParsing="false" onAction="#mudaCadastro" style="-fx-background-color: #F6B800;" text="Cadastre-se" textFill="#385ca6" underline="true">
+      <Button id="idCadastreSe" fx:id="idCadastreSe" layoutX="70.0" layoutY="326.0" mnemonicParsing="false" onAction="#criando" style="-fx-background-color: #F6B800;" text="Cadastre-se" textFill="#385ca6" underline="true">
          <font>
             <Font size="16.0" />
          </font>

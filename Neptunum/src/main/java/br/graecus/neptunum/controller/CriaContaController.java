@@ -13,7 +13,7 @@ public class CriaContaController {
     @FXML
     private TextField txtnome;
     @FXML
-    private TextField txtnomeUsuario;
+    private TextField txtusuario;
     @FXML
     private PasswordField txtsenha;
 
@@ -22,10 +22,10 @@ public class CriaContaController {
     UsuarioSessao usuarioSessao = new UsuarioSessao();
 
 
-    public void mudaLogin(ActionEvent event) {
+    public void criando(ActionEvent event) {
 
         String nome = txtnome.getText();
-        String nomeUsuario = txtnomeUsuario.getText();
+        String nomeUsuario = txtusuario.getText();
         String senha = txtsenha.getText();
 
         if(nome.isEmpty() && nomeUsuario.isEmpty() && senha.isEmpty())

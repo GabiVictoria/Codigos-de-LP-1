@@ -20,7 +20,7 @@
             <font>
                 <Font size="16.0" />
             </font></Label>
-        <Label layoutX="315.0" layoutY="188.0" text="Usuário" textFill="#3d3180">
+        <Label layoutX="315.0" layoutY="188.0" text="Nome de Usuário" textFill="#3d3180">
             <font>
                 <Font size="16.0" />
             </font></Label>
@@ -28,7 +28,7 @@
             <font>
                 <Font size="16.0" />
             </font></Label>
-        <Button id="idConcluir" layoutX="387.0" layoutY="339.0" mnemonicParsing="false" onAction="#mudaLogin" style="-fx-background-color: #F6B800; -fx-background-radius: 10px;" text="Concluir" textFill="#3d3180">
+        <Button id="idConcluir" layoutX="387.0" layoutY="339.0" mnemonicParsing="false" onAction="#criando" style="-fx-background-color: #F6B800; -fx-background-radius: 10px;" text="Concluir" textFill="#3d3180">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font></Button>

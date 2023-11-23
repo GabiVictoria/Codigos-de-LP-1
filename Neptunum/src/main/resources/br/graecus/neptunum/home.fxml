@@ -19,12 +19,8 @@
                 <Font name="Quicksand Bold" size="13.0" />
             </font>
         </Button>
-        <!--<ImageView fitHeight="103.0" fitWidth="101.0" layoutX="179.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: lightblue;">
-            <image>
-                <Image url="@../../../../../../../../../Downloads/cadeado-transformed.jpg" />
-            </image>
-        </ImageView>-->
-        <Label alignment="CENTER" layoutX="121.0" layoutY="30.0" prefHeight="50.0" prefWidth="167.0" style="-fx-background-radius: 30; -fx-background-color: #EFE7DD; -fx-label-padding: 8; -fx-font-weight: bold;" text="Agenda M&amp;J" textAlignment="CENTER" textFill="#3d3180">
+
+        <Label alignment="CENTER" layoutX="121.0" layoutY="30.0" prefHeight="50.0" prefWidth="167.0" style="-fx-background-radius: 30; -fx-background-color: #EFE7DD; -fx-label-padding: 8; -fx-font-weight: bold;" text="Nemesis table" textAlignment="CENTER" textFill="#3d3180">
             <font>
                 <Font name="Quicksand Bold" size="18.0" />
             </font>
