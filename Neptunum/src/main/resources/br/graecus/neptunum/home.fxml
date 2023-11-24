@@ -14,39 +14,39 @@
 <AnchorPane prefHeight="491.0" prefWidth="862.0" style="-fx-background-color: #B8987A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.graecus.neptunum.controller.HomeController">
     <children>
         <Label fx:id="aviso" layoutX="219.0" layoutY="200.0" prefHeight="18.0" prefWidth="0.0" textFill="deeppink" />
-        <Button id="idEditar" fx:id="btneditar" layoutX="522.0" layoutY="422.0" mnemonicParsing="false" onAction="#editarTarefa" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Editar" textFill="#203d65">
+        <Button id="idEditar" fx:id="btneditar" layoutX="556.0" layoutY="422.0" mnemonicParsing="false" onAction="#editarTarefa" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Editar" textFill="#203d65">
             <font>
                 <Font name="Quicksand Bold" size="13.0" />
             </font>
         </Button>
 
-        <Label alignment="CENTER" layoutX="121.0" layoutY="30.0" prefHeight="50.0" prefWidth="167.0" style="-fx-background-radius: 30; -fx-background-color: #EFE7DD; -fx-label-padding: 8; -fx-font-weight: bold;" text="Nemesis table" textAlignment="CENTER" textFill="#3d3180">
+        <Label alignment="CENTER" layoutX="41.0" layoutY="29.0" prefHeight="50.0" prefWidth="167.0" style="-fx-background-radius: 30; -fx-background-color: #EFE7DD; -fx-label-padding: 8; -fx-font-weight: bold;" text="Nemesis table" textAlignment="CENTER" textFill="#3d3180">
             <font>
                 <Font name="Quicksand Bold" size="18.0" />
             </font>
         </Label>
-        <Button id="IdAdicionar" fx:id="btnsalvar" layoutX="444.0" layoutY="422.0" mnemonicParsing="false" onAction="#salvarTarefa" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Salvar" textFill="#203d65">
+        <Button id="IdAdicionar" fx:id="btnsalvar" layoutX="478.0" layoutY="422.0" mnemonicParsing="false" onAction="#salvarTarefa" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Salvar" textFill="#203d65">
             <font>
                 <Font name="Quicksand Bold" size="13.0" />
             </font>
         </Button>
-        <Button id="idLimpar" fx:id="btnlimpar" layoutX="679.0" layoutY="422.0" mnemonicParsing="false" onAction="#limparTarefa" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Limpar" textFill="#203d65">
+        <Button id="idLimpar" fx:id="btnlimpar" layoutX="94.0" layoutY="421.0" mnemonicParsing="false" onAction="#limparTarefa" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Limpar" textFill="#203d65">
             <font>
                 <Font name="Quicksand Bold" size="13.0" />
             </font>
         </Button>
-        <Button id="idApagar" fx:id="btndeletar" layoutX="596.0" layoutY="422.0" mnemonicParsing="false" onAction="#deletarTarefa" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Deletar" textFill="#203d65">
+        <Button id="idApagar" fx:id="btndeletar" layoutX="630.0" layoutY="422.0" mnemonicParsing="false" onAction="#deletarTarefa" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Deletar" textFill="#203d65">
             <font>
                 <Font name="Quicksand Bold" size="13.0" />
             </font>
         </Button>
-        <MenuButton fx:id="btnCategoria" layoutX="366.0" layoutY="42.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="156.0" text="Tarefas ">
+        <MenuButton fx:id="btnCategoria" layoutX="239.0" layoutY="41.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="156.0" text="Categorias ">
             <font>
                 <Font name="Quicksand Bold" size="13.0" />
             </font>
         </MenuButton>
         <Pane layoutX="585.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0" />
-        <AnchorPane layoutX="105.0" layoutY="95.0" prefHeight="308.0" prefWidth="200.0" style="-fx-background-color: #F6B800; -fx-background-radius: 15;">
+        <AnchorPane layoutX="25.0" layoutY="94.0" prefHeight="308.0" prefWidth="200.0" style="-fx-background-color: #F6B800; -fx-background-radius: 15;">
             <children>
                 <TextField id="des" fx:id="descricaoTarefa" alignment="TOP_LEFT" layoutX="26.0" layoutY="79.0" prefHeight="106.0" prefWidth="149.0" promptText="Descrição" />
                 <TextField id="tittle" fx:id="tituloTarefa" layoutX="26.0" layoutY="35.0" prefHeight="27.0" prefWidth="149.0" promptText="Titulo" />
@@ -54,16 +54,17 @@
                 <TextField fx:id="categoria" layoutX="27.0" layoutY="261.0" promptText="Categoria" />
             </children>
         </AnchorPane>
-        <Button id="retornarlogin" fx:id="retornar" layoutX="141.0" layoutY="422.0" mnemonicParsing="false" onAction="#retornar" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Retornar ao Login" textFill="#203d65">
+        <Button id="retornarlogin" fx:id="retornar" layoutX="719.0" layoutY="41.0" mnemonicParsing="false" onAction="#retornar" style="-fx-background-color: #F6B800; -fx-font-weight: bold;" text="Retornar ao Login" textFill="#203d65">
             <font>
                 <Font name="Quicksand Bold" size="13.0" />
             </font>
         </Button>
-        <TableView fx:id="tabela" layoutX="330.0" layoutY="93.0" onMouseClicked="#getData" prefHeight="308.0" prefWidth="497.0" style="-fx-background-radius: 24;">
+        <TableView fx:id="tabela" layoutX="239.0" layoutY="93.0" onMouseClicked="#getData" prefHeight="308.0" prefWidth="608.0" style="-fx-background-radius: 24;">
             <columns>
                 <TableColumn id="colid" fx:id="colid" prefWidth="41.0" text="id" />
                 <TableColumn fx:id="titulo" prefWidth="109.0" text="titulo" />
-                <TableColumn fx:id="descri" prefWidth="220.0" text="descricão" />
+                <TableColumn fx:id="descri" prefWidth="217.0" text="descricão" />
+                <TableColumn fx:id="cat" prefWidth="110.0" text="categoria" />
                 <TableColumn fx:id="datee" prefWidth="77.0" text="Data" />
                 <TableColumn fx:id="checkBoxCol" prefWidth="49.0" text="Status" />
             </columns>

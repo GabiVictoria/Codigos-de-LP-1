@@ -35,7 +35,9 @@ import java.util.ResourceBundle;
         private TableColumn<Tarefa, String> descri;
 
         @FXML
-        private TableColumn<Tarefa, Boolean> checkBoxCol;
+        private  TableColumn<Tarefa, Boolean> checkBoxCol;
+        @FXML
+        private TableColumn<Tarefa, String> cat;
 
         @FXML
         private TableView<Tarefa> tabela;
@@ -71,25 +73,26 @@ import java.util.ResourceBundle;
             colid.setCellValueFactory(new PropertyValueFactory<>("id"));
             titulo.setCellValueFactory(new PropertyValueFactory<>("titulo"));
             descri.setCellValueFactory(new PropertyValueFactory<>("descricao"));
+            cat.setCellValueFactory(new PropertyValueFactory<>("categoria"));
             checkBoxCol.setCellValueFactory(new PropertyValueFactory<>("status"));
             datee.setCellValueFactory(new PropertyValueFactory<>("dataLimite"));
 
 
-//            checkBoxCol.setCellFactory(tc -> new CheckBoxTableCell<Tarefa, Boolean>() {
-//                @Override
-//                public void updateItem(Boolean item, boolean empty) {
-//                    super.updateItem(item, empty);
-//                    if (!isEmpty()) {
-//                        CheckBox checkBox = new CheckBox();
-//                        checkBox.setSelected(item);
-//                        setGraphic(checkBox);
-//                        checkBox.setOnAction(event -> {
-//                            Tarefa tarefa = getTableView().getItems().get(getIndex());
-//                            tarefa.setStatus(checkBox.isSelected());
-//                        });
-//                    }
-//                }
-//            });
+            checkBoxCol.setCellFactory(tc -> new CheckBoxTableCell<Tarefa, Boolean>() {
+                @Override
+                public void updateItem(Boolean item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (!isEmpty()) {
+                        CheckBox checkBox = new CheckBox();
+                        checkBox.setSelected(item);
+                        setGraphic(checkBox);
+                        checkBox.setOnAction(event -> {
+                            Tarefa tarefa = getTableView().getItems().get(getIndex());
+                            tarefa.setStatus(checkBox.isSelected());
+                        });
+                    }
+                }
+            });
         }
 
 
@@ -100,12 +103,16 @@ import java.util.ResourceBundle;
             String descricao = descricaoTarefa.getText();
             String data = String.valueOf(dataTarefa.getValue());
             System.out.println(data);
-            Tarefa tarefa = new Tarefa(nome, descricao, data, false, new Categoria("romano"));
+            String categotia = categoria.getText();
+            Tarefa tarefa = new Tarefa(nome, descricao, data, false, new Categoria(categotia));
             System.out.println("salvou tarefa");
             tarefaSessao.salvarTarefa(tarefa);
             exibirTarefas();
         }
+        @FXML
+        void addCategoria(ActionEvent event){
 
+        }
 
 
         @FXML
@@ -141,6 +148,7 @@ import java.util.ResourceBundle;
             descricaoTarefa.setText(null);
             dataTarefa.setValue(null);
             btnsalvar.setDisable(false);
+            categoria.setText(null);
         }
 
         @FXML
@@ -148,10 +156,6 @@ import java.util.ResourceBundle;
             clear();
         }
 
-        @FXML
-        void addCategoria(ActionEvent event){
-
-        }
 
         public void mostrarCategorias() {
             categorias = categoriaSesao.listaCategoria();

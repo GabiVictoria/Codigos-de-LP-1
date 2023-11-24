@@ -3,11 +3,15 @@ package br.graecus.neptunum.controller;
 import br.graecus.neptunum.HelloApplication;
 import br.graecus.neptunum.modelos.*;
 import br.graecus.neptunum.Sessao.*;
+import br.graecus.neptunum.util.HibernateUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 public class CriaContaController {
     @FXML
