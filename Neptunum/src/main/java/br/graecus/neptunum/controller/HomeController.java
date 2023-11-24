@@ -77,7 +77,7 @@ import java.util.ResourceBundle;
             checkBoxCol.setCellValueFactory(new PropertyValueFactory<>("status"));
             datee.setCellValueFactory(new PropertyValueFactory<>("dataLimite"));
 
-
+// achei que sria legal colocar isso mas nn deu tão certo assim.
             checkBoxCol.setCellFactory(tc -> new CheckBoxTableCell<Tarefa, Boolean>() {
                 @Override
                 public void updateItem(Boolean item, boolean empty) {
